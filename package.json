@@ -1,0 +1,50 @@
+{
+  "name": "backend-app",
+  "version": "1.0.0",
+  "description": "Backend aplicativo movil medico",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "fluter",
+    "medico",
+    "node.js"
+  ],
+  "author": "Josue Ramirez H.",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/storage": "^5.20.5",
+    "bluebird": "^3.7.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "debug": "^4.3.4",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "firebase": "^10.7.1",
+    "firebase-admin": "^11.10.1",
+    "http": "^0.0.1-security",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.4",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.1",
+    "pg-promise": "^11.5.0",
+    "readable-stream": "^4.5.2",
+    "socket.io": "^2.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosueRamirezH01/Backend.git"
+  },
+  "private": false,
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "bugs": {
+    "url": "https://github.com/JosueRamirezH01/Backend/issues"
+  },
+  "homepage": "https://github.com/JosueRamirezH01/Backend#readme"
+}
