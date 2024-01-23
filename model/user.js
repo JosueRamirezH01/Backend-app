@@ -4,7 +4,7 @@ const User = {};
 
 User.getAll = () => {
     const sql = 
-    `SELECT * FROM  users`;
+    `SELECT * FROM  usuario`;
     return db.manyOrNone(sql)
 }
 
