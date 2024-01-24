@@ -10,7 +10,7 @@ types.setTypeParser(1114, function(stringValue){
     return stringValue;
 });
 const databaseConfig = {
-    'host': 'postgres://qtyudfnq:BHUXXWo6B-YFehPPQhZgzeEw5mx9Mp-y@salt.db.elephantsql.com/qtyudfnq',
+    'host': 'salt.db.elephantsql.com',
     'port': 5432,
     'database': 'qtyudfnq',
     'user': 'qtyudfnq',
