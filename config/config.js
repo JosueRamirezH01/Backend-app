@@ -1,3 +1,4 @@
+const { ConfigModule } = require('@nestjs/config');
 const promise = require('bluebird');
 const options ={
     promiseLib: promise,
@@ -9,11 +10,11 @@ types.setTypeParser(1114, function(stringValue){
     return stringValue;
 });
 const databaseConfig = {
-    'host': '127.0.0.1',
+    'host': 'postgres://qtyudfnq:BHUXXWo6B-YFehPPQhZgzeEw5mx9Mp-y@salt.db.elephantsql.com/qtyudfnq',
     'port': 5432,
-    'database': 'app_medico',
-    'user': 'postgres',
-    'password': 'josuejeremias01'
+    'database': 'qtyudfnq',
+    'user': 'qtyudfnq',
+    'password': 'BHUXXWo6B-YFehPPQhZgzeEw5mx9Mp-y'
 };
 
 const db = pgp(databaseConfig);
