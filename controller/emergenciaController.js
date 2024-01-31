@@ -44,7 +44,7 @@ module.exports = {
             return res.status(201).json({
               success: true,
               message: 'La emergencia se cancelo correctamente',
-              data: data.id_emergencia
+              //data: data.id_emergencia
             });
         } catch (error) {
           console.error('Error al cancelar una emergencia:', error);

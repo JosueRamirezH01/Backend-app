@@ -3,13 +3,14 @@ const Emergencia = {};
 
 Emergencia.create = (emergencia) => {
     const sql = `
-    INSERT INTO emergencia(id_user, id_medico, direccion, status, timestamp, created_at, updated_at) 
-    VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id_emergencia
+    INSERT INTO emergencia(id_user, id_medico, direccion, observacion, status, timestamp, created_at, updated_at) 
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id_emergencia
     `;
     return db.one(sql, [
         emergencia.id_user,
         emergencia.id_medico,
         emergencia.direccion,
+        emergencia.observacion,
         emergencia.status,
         Date.now,
         new Date(),
@@ -25,6 +26,7 @@ Emergencia.getEmergencia = (id_medico,status) =>{
     SELECT 
     e.id_emergencia,
     e.direccion,
+    e.observacion,
     e.status,
     e.timestamp,
     JSON_BUILD_OBJECT(

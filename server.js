@@ -52,9 +52,9 @@ usersMedico(app, upload);
 geo(app);
 emergencia(app);
 //
-server.listen(port,() =>
+server.listen(port,'192.168.10.129',function(){
     console.log('Aplicacion de NodeJS ' + port + 'Iniciada..')
-);
+});
 
 app.get('/',(req,res) => {
     res.send('Ruta Principal del backend medico');

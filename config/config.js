@@ -10,11 +10,11 @@ types.setTypeParser(1114, function(stringValue){
     return stringValue;
 });
 const databaseConfig = {
-    'host': 'salt.db.elephantsql.com',
+    'host': '127.0.0.1',
     'port': 5432,
-    'database': 'qtyudfnq',
-    'user': 'qtyudfnq',
-    'password': 'BHUXXWo6B-YFehPPQhZgzeEw5mx9Mp-y'
+    'database': 'app_medico',
+    'user': 'postgres',
+    'password': 'josuejeremias01'
 };
 
 const db = pgp(databaseConfig);
