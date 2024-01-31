@@ -10,11 +10,11 @@ types.setTypeParser(1114, function(stringValue){
     return stringValue;
 });
 const databaseConfig = {
-    'host': '127.0.0.1',
+    'host': 'dpg-cmo3rita73kc73b406o0-a.oregon-postgres.render.com',
     'port': 5432,
-    'database': 'app_medico',
-    'user': 'postgres',
-    'password': 'josuejeremias01'
+    'database': 'bd_medico',
+    'user': 'bd_medico_user',
+    'password': 'Acn5awMU6vRArWl66OMaxFattG0Rp3eK'
 };
 
 const db = pgp(databaseConfig);
