@@ -10,7 +10,7 @@ types.setTypeParser(1114, function(stringValue){
     return stringValue;
 });
 const databaseConfig = {
-    'host': 'postgres://bd_medico_user:Acn5awMU6vRArWl66OMaxFattG0Rp3eK@dpg-cmo3rita73kc73b406o0-a/bd_medico',
+    'host': 'dpg-cmo3rita73kc73b406o0-a',
     'port': 5432,
     'database': 'bd_medico',
     'user': 'bd_medico_user',
