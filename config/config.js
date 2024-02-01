@@ -14,7 +14,12 @@ const databaseConfig = {
     'port': 5432,
     'database': 'bd_medico',
     'user': 'bd_medico_user',
-    'password': 'Acn5awMU6vRArWl66OMaxFattG0Rp3eK'
+    'password': 'Acn5awMU6vRArWl66OMaxFattG0Rp3eK',
+    'ssl': {
+        // Configuración SSL/TLS según los requisitos de Render
+        // Puedes necesitar proporcionar rutas a los certificados, etc.
+        rejectUnauthorized: false,  // Esto deshabilita la verificación del certificado (¡NO recomendado para producción sin entender los riesgos!)
+    }
 };
 
 const db = pgp(databaseConfig);
