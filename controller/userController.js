@@ -5,6 +5,7 @@ const storage = require('../utils/cloud_storage');
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
 const Rol = require('../model/rol');
+require('dotenv').config();
 
 function generateRandomCode() {
     const min = 1000; // Valor mínimo (inclusive)
@@ -413,7 +414,7 @@ async function sendRecoveryEmail(email, token) {
   const transporter = nodemailer.createTransport({
     service: 'Gmail', // O el servicio de correo que prefieras (p. ej., 'Outlook')
     auth: {
-      user: 'josueramirezherrera01@gmail.com', // Coloca tu dirección de correo electrónico
-      pass: 'pjezvxxzgdpuwotd', // Coloca tu contraseña de correo electrónico
+      user: process.env.EMAIL, // Coloca tu dirección de correo electrónico
+      pass: process.env.EMAIL_PASSWORD, // Coloca tu contraseña de correo electrónico
     },
   });

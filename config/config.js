@@ -1,4 +1,5 @@
 const { ConfigModule } = require('@nestjs/config');
+require('dotenv').config();
 const promise = require('bluebird');
 const options ={
     promiseLib: promise,
@@ -10,12 +11,12 @@ types.setTypeParser(1114, function(stringValue){
     return stringValue;
 });
 const databaseConfig = {
-    'host': 'dpg-cmo3rita73kc73b406o0-a.oregon-postgres.render.com',
-    'port': 5432,
-    'database': 'bd_medico',
-    'user': 'bd_medico_user',
-    'password': 'Acn5awMU6vRArWl66OMaxFattG0Rp3eK',
-    'ssl': true
+    'host': process.env.POSTGRES_HOST,
+    'port': process.env.POSTGRES_PORT,
+    'database': process.env.POSTGRES_DATABASE,
+    'user': process.env.POSTGRES_USERNAME,
+    'password': process.env.PGPASSWORD,
+    'ssl': process.env.POSTGRES_SSL
 };
 
 const db = pgp(databaseConfig);
