@@ -11,12 +11,12 @@ types.setTypeParser(1114, function(stringValue){
     return stringValue;
 });
 const databaseConfig = {
-    'host': 'dpg-cnb72ha1hbls73dlu640-a.frankfurt-postgres.render.com',
-    'port': 5432,
-    'database': 'appmedicodb',
-    'user': 'appmedicodb_user',
-    'password': 'lwDME6QhIaeaW4pHMyJUY4XuFEKM5gIE',
-    'ssl': true
+    'host': process.env.POSTGRES_HOST,
+    'port': process.env.POSTGRES_PORT,
+    'database': process.env.POSTGRES_DATABASE,
+    'user': process.env.POSTGRES_USERNAME,
+    'password': process.env.PGPASSWORD,
+    'ssl': process.env.POSTGRES_SSL
 };
 
 const db = pgp(databaseConfig);
